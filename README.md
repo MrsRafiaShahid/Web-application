@@ -1,6 +1,3 @@
-   Here is a README file for your To-Do List project:
-
----
 
 # TO_DO_LIST
 
@@ -21,7 +18,7 @@ Below you will find details on how to use and customize the project.
 
 1. **Clone the Repository**: Download the project files from the repository to your local machine.
     ```bash
-    git clone [repository URL]
+    git clone [https://github.com/MrsRafiaShahid/Web-application/blob/main/Project/To-do-list/index.html]
     ```
 2. **Open the `index.html` file**: Open the `index.html` file in your preferred web browser.
 3. **Add Tasks**: Type your task into the input field and click the "ADD Task" button to add it to the list.
