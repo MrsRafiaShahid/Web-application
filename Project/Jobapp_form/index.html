@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <style>
+      * {
+        form{
+          padding: 10px;
+          margin: 10px;
+          /* border: 1px solid; */
+        }
+        label {
+          margin: 10px;
+          padding: 10px;
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+          font-size: 1.2em;
+        }
+        input {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 10px;
+          padding: 15px;
+          border: 2px black solid;
+          border-radius: 10px;
+        }
+        h1 {
+          text-align: center;
+          font-size: 3.4em;
+        }
+        font {
+          color: red;
+          font-size: 1.2em;
+        }
+        button {
+          padding: 20px;
+          margin: 10px;
+          width: 150px;
+          font-size: 1.2em;
+          font-family: Georgia, "Times New Roman", Times, serif;
+          background-color: cadetblue;
+          border-radius: 10px;
+        }
+        p {
+          font-size: 1.2em;
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        }
+        input[type="checkbox"]{
+          display: flex;
+          flex-direction: column;
+          align-items: normal;
+
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <h1>Job Application</h1>
+      <form action="/register" method="post">
+        <label for="">
+          First Name: <font>*</font>
+          <input
+            type="text"
+            name="f-name"
+            id="f-name"
+            placeholder="Enter your first name"
+            required
+          />
+        </label>
+        <label for="">
+          Last Name:
+          <input
+            type="text"
+            name="l-name"
+            id="l-name"
+            placeholder="Enter your last name"
+          />
+        </label>
+        <label for="">
+          Phone Number: <font>*</font>
+          <input
+            type="tel"
+            name="phoneno."
+            id="phno."
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            placeholder="Enter your Phone No."
+            autocomplete="tel-country-code"
+            required
+          />
+        </label>
+        <label for=""
+          >Email: <font>*</font>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your Email"
+            autocomplete="email"
+            required
+          />
+        </label>
+        <label for="">
+          Address:
+          <input
+            type="text"
+            name="Address"
+            id="add"
+            autocomplete="address-level2"
+            placeholder="Enter your Address"
+          />
+        </label>
+        <label for="">
+          Street:
+          <input
+            type="text"
+            name="street"
+            id="street"
+            autocomplete="street-address"
+            placeholder="Enter your street No"
+          />
+        </label>
+        <label for="">
+          Province:
+          <select name="Province" id="Province">
+            <option value="prov">Province</option>
+            <option value="puj">Punjab</option>
+            <option value="sin">Sindh</option>
+            <option value="Kpk">Khyber Phatunkhawan</option>
+            <option value="bol">Bolochistan</option>
+          </select>
+        </label>
+        <label for="city">
+          City:
+          <select name="city" id="city">
+            <option value="city">City</option>
+            <option value="lah">Lahore</option>
+            <option value="kar">Karachi</option>
+            <option value="kas">Kasur</option>
+            <option value="mul">Multan</option>
+            <option value="guj">Gujranwala</option>
+            <option value="hyd">Hyderabad</option>
+            <option value="gaw">Gawadar</option>
+            <option value="qut">Quetta</option>
+            <option value="isl">Islamabad</option>
+            <option value="fas">Faislabad</option>
+            <option value="raw">Rawalpindi</option>
+            <option value="bah">Bahawalpur</option>
+            <option value="att">Attock</option>
+            <option value="sar">Sargodah</option>
+            <option value="peh">Pwshawar</option>
+          </select>
+        </label>
+        <label for="Postal code"
+          >Zip code: <br />
+          <input
+            type="number"
+            name="zip"
+            id="zip"
+            autocomplete="postal-code"
+            placeholder="Enter your zip code"
+          />
+        </label>
+
+        <label for="">
+          Resume: <font>*</font>
+          <input
+            type="file"
+            name="resume"
+            id="resume"
+            placeholder="upload-resume"
+            required
+          />
+        </label>
+        <label for="">
+          Coverletter: <br />
+          <br />
+          <textarea name="coverletter" id="coverletter" cols="30" rows="10">
+          </textarea>
+        </label>
+        <label for="">
+          Education: <br />
+          <input type="radio" name="education" id="Phd" value="0" />Phd
+          <input type="radio" name="education" id="master" value="0" />
+          Masters
+          <input type="radio" name="education" id="bachelors" value="0" />
+          Bachelors
+          <input type="radio" name="education" id="inter" value="0" />
+          Intermediate
+          <input type="radio" name="education" id="matric" value="0" />
+          Matric
+        </label>
+
+        <label for="">
+          School/University: <font>*</font>
+          <input
+            type="text"
+            name="sch"
+            id="sch/uni"
+            placeholder="Enter name of your School/university"
+            required
+          />
+        </label>
+
+        <label for="">
+          Field:<font>*</font>
+          <input
+            type="text"
+            name
+            name="field"
+            id="field"
+            placeholder="Enter your major of study"
+            required
+          />
+        </label>
+        <label for="">
+          Graduation year:
+          <input
+            type="date"
+            name="Year"
+            id="Year"
+            placeholder="Enter Your Graduation year"
+          />
+        </label>
+
+        <label for="">
+          Employment History:
+          <br />
+          <br />
+          <textarea
+            name="emphis"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Enter your Employment History"
+          ></textarea>
+        </label>
+
+        <label for="">
+          Company Names:
+          <input
+            type="text"
+            name="comp"
+            id="c-name"
+            placeholder="Entery Your company names"
+          />
+        </label>
+        <label for="">
+          Employment Dates:
+          <input type="date" name="empdate" id="empdate" />
+        </label>
+
+        <label for=""
+          >Job Responsibility: <br />
+          <br />
+          <textarea
+            name="Responsibility"
+            id="respone"
+            cols="50"
+            rows="5"
+          ></textarea>
+        </label>
+        <label for=""
+          >Relevant Skills: <br />
+          <br />
+          <input type="checkbox" name="" id="" />Leadership
+          <input type="checkbox" name="" id="" />Teamwork
+          <input type="checkbox" name="" id="" />Computer Literacy
+          <input type="checkbox" name="" id="" />Problem solving
+          <input type="checkbox" name="" id="" />Critical Thinking
+          <input type="checkbox" name="" id="" />Customer Servinces
+          <input type="checkbox" name="" id="" />Active listening
+          <input type="checkbox" name="" id="" />Communcation skills
+          <input type="checkbox" name="" id="" />Project Management
+          <input type="checkbox" name="" id="" />Research
+          <input type="checkbox" name="" id="" />Creativity
+          <input type="checkbox" name="" id="" />Decision Making
+          <input type="checkbox" name="" id="" />Data analysis
+          <input type="checkbox" name="" id="" />Management Skills
+          <input type="checkbox" name="" id="" />Organizational Skills
+        </label>
+        <label for=""
+          >Certfification:
+          <input
+            type="file"
+            name="certification"
+            id="certify"
+            placeholder="upload-certificate"
+          />
+        </label>
+
+        <label for=""
+          >Start Date:
+          <input type="date" name="" id="" />
+        </label>
+        <label for="">
+          Work Schedule:
+          <input type="week" name="workschedule" id="w-schd" />
+        </label>
+        <label for="">
+          Relcate:
+          <input type="radio" name="relcote" id="yes" value="y" />Yes
+          <input type="radio" name="relcote" id="no" value="n" />No
+        </label>
+        <label for="">
+          Refrence Name:
+          <input
+            type="text"
+            name="refname"
+            id="ref-name"
+            placeholder="Enter Refrence name"
+          />
+        </label>
+
+        <label for=""
+          >Refrence Contact No:
+          <input
+            type="tel"
+            name="refno"
+            id="ref-no."
+            autocomplete="tel-country-code"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            placeholder="Enter Refrence contac no."
+          />
+        </label>
+
+        <label for=""
+          >RelationShip:
+          <input
+            type="text"
+            name="relation"
+            id="relation"
+            placeholder="Enter your RelationShip"
+          />
+        </label>
+        <p>Why do you want to work to our company?</p>
+        <br />
+        <textarea name="" id="" cols="50" rows="6"></textarea>
+
+        <label for="">
+          Terms And Conditions:
+          <input type="checkbox" name="accept" id="t/c" required />Accept
+        </label>
+
+        <label for="">
+          Privacy Policy Acknolgement:
+          <input type="checkbox" name="accept" id="t/c" required />Accept
+        </label>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
