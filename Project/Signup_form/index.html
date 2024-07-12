@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=.container, initial-scale=1.0" />
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="row"> -->
+        <form>
+          <div class="formbody" id="formInput1">
+            <label for="Username"> Username: </label> <br />
+            <input
+              type="text"
+              name="Username"
+              id="Username"
+              placeholder="Enter your Username"
+              required
+            />
+          </div>
+          <div class="formbody" id="formInput2">
+            <label for="Email"> Email: </label> <br />
+            <input
+              type="email"
+              name="email"
+              id="Email"
+              placeholder="Enter your Email"
+              required
+            />
+          </div>
+          <div class="formbody" id="formInput3">
+            <label for="password"> Password: </label> <br />
+            <input
+              type="password"
+              name="password"
+              id="Password"
+              placeholder="Enter your Password"
+              required
+            />
+          </div>
+          <div class="formbody" id="formInput4">
+            <label for="phoneNumber"> Phone Number: </label> <br />
+            <input
+              type="text"
+              name="phoneNumber"
+              id="PhoneNumber"
+              placeholder="Enter your Phone Number"
+              required
+            />
+          </div>
+          <div class="formbody" id="formInput5">
+            <label for="age"> Age: </label> <br />
+            <input
+              type="number"
+              name="age"
+              id="Age"
+              placeholder="Enter your Age"
+              required
+            />
+          </div>
+
+          <button type="button" onclick="signup()">Sign up</button>
+        </form>
+      <!-- </div> -->
+    </div>
+    <script>
+      function signup() {
+        var name = document.getElementById("Username").value;
+        var email = document.getElementById("Email").value;
+        var password = document.getElementById("Password").value;
+        var number = document.getElementById("PhoneNumber").value;
+        var age = document.getElementById("Age").value;
+         if (
+          (name === "") ||
+          (email === "") ||
+          (password === "") ||
+          (number === "") ||
+          (age === "")
+        ) {
+          alert("Enter Data");
+          }
+          else if((name = Text)|| (age =Number)) {
+              alert("valid data");
+            alert(
+              "Username:" +
+                name +
+                "\n" +
+                "Email:" +
+                email +
+                "\n" +
+                "Password:" +
+                password +
+                "\n" +
+                "Number:" +
+                number +
+                "\n" +
+                "Age:" +
+                age
+            );
+              } 
+              else{
+            alert("Invalid data");
+        }
+      }
+    </script>
+  </body>
+</html>
